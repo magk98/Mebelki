@@ -1,6 +1,6 @@
-function changeColor() {
-    if (document.getElementById("color").getAttribute('diffuseColor') === "1 0 0")
-        document.getElementById("color").setAttribute('diffuseColor', '0 0 1');
+function redNose() {
+    if (document.getElementById('Deer__MA_Nose').getAttribute('diffuseColor') !== '1 0 0')
+        document.getElementById('Deer__MA_Nose').setAttribute('diffuseColor', '1 0 0');
     else
-        document.getElementById("color").setAttribute('diffuseColor', '1 0 0');
+        document.getElementById('Deer__MA_Nose').setAttribute('diffuseColor', '0 0 0');
 }

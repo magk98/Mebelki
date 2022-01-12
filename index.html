@@ -5,39 +5,21 @@
     <title>Mebelki</title>
     <title>X3DOM obiekt geometryczny</title>
     <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css"/>
+    <link rel="stylesheet" href="styles.css"/>
     <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+    <script  src="script.js" defer></script>
 </head>
 
 <body>
 
-<h1>Obsluga za pomoca JS</h1>
+<h1>Sklep meblowy</h1>
 <p>
-    Przykladowa strona z obsluga JS.
+    Narazie mamy tutaj jelenia. Rudolfa Jelenia.
 </p>
 <x3d width='500px' height='400px'>
     <scene>
-        <shape onclick="changeColor();">
-            <appearance>
-                <material id="color" diffuseColor='1 0 0'></material>
-            </appearance>
-            <box></box>
-        </shape>
-        <transform translation='-3 0 0'>
-            <shape>
-                <appearance>
-                    <material diffuseColor='0 1 0'></material>
-                </appearance>
-                <cone></cone>
-            </shape>
-        </transform>
-        <transform translation='3 0 0'>
-            <shape>
-                <appearance>
-                    <material diffuseColor='0 0 1'></material>
-                </appearance>
-                <sphere></sphere>
-            </shape>
-        </transform>
+        <viewpoint position="-1.94639 1.79771 -2.89271" orientation="0.03886 0.99185 0.12133 3.75685"></viewpoint>
+        <Inline nameSpaceName="Deer" mapDEFToID="true" onclick='redNose();' url="Deer.x3d"></Inline>
     </scene>
 </x3d>
 

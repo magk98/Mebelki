@@ -1,5 +1,5 @@
 x3d {
-    border: 2px solid darkorange;
+    border: 2px solid black;
     background: rgba(128, 128, 128, 0.4);
 }
 
@@ -12,5 +12,5 @@ body {
 }
 
 h1 {
-    color: darkorange;
+    color: black;
 }
