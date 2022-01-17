@@ -16,14 +16,15 @@
 <p>
     Model 1
 </p>
-<div class="circle red" onclick="changeColor('1 0 0')"></div>
-<div class="circle blue" onclick="changeColor('0 0 1')"></div>
-<div class="circle green" onclick="changeColor('0 1 0')"></div>
+<div class="circle red" onclick="changeColor('krzeslo','1 0 0')"></div>
+<div class="circle blue" onclick="changeColor('krzeslo','0 0 1')"></div>
+<div class="circle green" onclick="changeColor('krzeslo','0 1 0')"></div>
 
 <x3d width='500px' height='400px'>
     <scene>
         <NavigationInfo id="head" headlight="true" type="EXAMINE"></NavigationInfo>
-        <Inline nameSpaceName="fotel" mapDEFToID="true" url="models/fotel_blue.x3d"></Inline>
+<!--        <Inline nameSpaceName="fotel" mapDEFToID="true" url="models/fotel_blue.x3d"></Inline>-->
+        <Inline nameSpaceName="krzeslo" mapDEFToID="true" url="models/krzeslo.x3d"></Inline>
         <!--        <Inline nameSpaceName="Deer" mapDEFToID="true" onclick='redNose();' url="Deer.x3d"></Inline>-->
     </scene>
 </x3d>
