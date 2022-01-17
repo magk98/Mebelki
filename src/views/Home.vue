@@ -1,19 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1 class="text-3xl font-bold">Hello!</h1>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="grid grid-cols-3 gap-4">
+    <product-card name="Krzesło" />
+    <product-card name="Sofa" />
+    <product-card name="Stół" />
+    <product-card name="Wanna" />
+    <product-card name="Lampa" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProductCard from '../components/ProductCard.vue'
 
+// @ is an alias to /src
 export default {
+  components: { ProductCard },
   name: 'Home',
-  components: {
-    HelloWorld
-  }
 }
 </script>
