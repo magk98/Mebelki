@@ -2,7 +2,7 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D version="3.0" profile="Immersive" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.0.xsd">
 	<head>
-		<meta name="filename" content="fotel.x3d" />
+		<meta name="filename" content="fotel_blue.x3d" />
 		<meta name="generator" content="Blender 2.93.1" />
 	</head>
 	<Scene>
@@ -29,7 +29,7 @@
 			            />
 		</Transform>
 		<Transform DEF="Camera_TRANSFORM"
-		           translation="-7.358891 4.958309 -6.925791"
+		           translation="-15.768891 10.368309 -17.435791"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="-0.098233 -0.968789 -0.227591 2.349487"
 		           >
@@ -37,7 +37,7 @@
 			           centerOfRotation="0 0 0"
 			           position="-0.00 -0.00 0.00"
 			           orientation="-0.00 -0.47 -0.88 0.00"
-			           fieldOfView="0.691"
+			           fieldOfView="1.173"
 			           />
 		</Transform>
 		<Transform DEF="Sofa_TRANSFORM"
