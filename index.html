@@ -5,24 +5,29 @@
     <title>Mebelki</title>
     <title>X3DOM obiekt geometryczny</title>
     <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css"/>
-    <link rel="stylesheet" href="styles.css"/>
     <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
-    <script  src="script.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 
 <body>
 
 <h1>Sklep meblowy</h1>
 <p>
-Model 1
+    Model 1
 </p>
+<div class="circle red" onclick="changeColor('1 0 0')"></div>
+<div class="circle blue" onclick="changeColor('0 0 1')"></div>
+<div class="circle green" onclick="changeColor('0 1 0')"></div>
+
 <x3d width='500px' height='400px'>
     <scene>
-<NavigationInfo id="head" headlight="true" type="EXAMINE"></NavigationInfo>
-        <Inline nameSpaceName="fotel" mapDEFToID="true" onclick='changeColor();' url="models/fotel_blue.x3d"></Inline>
-<!--        <Inline nameSpaceName="Deer" mapDEFToID="true" onclick='redNose();' url="Deer.x3d"></Inline>-->
+        <NavigationInfo id="head" headlight="true" type="EXAMINE"></NavigationInfo>
+        <Inline nameSpaceName="fotel" mapDEFToID="true" url="models/fotel_blue.x3d"></Inline>
+        <!--        <Inline nameSpaceName="Deer" mapDEFToID="true" onclick='redNose();' url="Deer.x3d"></Inline>-->
     </scene>
 </x3d>
 
 </body>
+
 </html>

@@ -10,3 +10,24 @@ body {
     margin: 3em;
     color: lightgray;
 }
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 8px;
+    display: inline-flex;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
