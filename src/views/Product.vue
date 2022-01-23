@@ -54,7 +54,7 @@
             <box></box>
           </shape>
         </scene>
-  </x3d>
+      </x3d>
     </div>
   </div>
   <!-- <div class="circle red" @click="changeColor('krzeslo','0.3 0 0')"></div>

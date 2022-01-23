@@ -1,6 +1,9 @@
 /**
  * @type {import('@vue/cli-service').ProjectOptions}
  */
+
+const x3dTags = ['x3d', 'Inline', 'NavigationInfo', 'scene', 'appearance', 'shape', 'material', 'box', 'transform', 'timeSensor', 'positionInterpolator', 'orientationInterpolator', 'route']
+
 module.exports = {
     // ignore Stencil web components
     chainWebpack: config => {
@@ -10,7 +13,7 @@ module.exports = {
             .tap(options => {
                 options.compilerOptions = {
                     ...options.compilerOptions,
-                    isCustomElement: tag => tag === 'x3d' || tag === 'Inline' || tag === 'NavigationInfo' || tag === 'scene' || tag === 'appearance' || tag === 'shape' || tag === 'material' || tag === 'box'
+                    isCustomElement: (tag) => x3dTags.includes(tag) || tag === 'appearance' // Ja nie wiem czemu bez tej alternatywy nie działa XD
                 }
                 return options
             })

@@ -3,7 +3,7 @@
     <div class="w-1/3">
       <filters />
     </div>
-    <div class="w-2/3 grid grid-cols-3 gap-4">
+    <div class="flex flex-wrap items-center justify-center">
       <product-card name="Krzesło" />
       <product-card name="Sofa" />
       <product-card name="Stół" />
