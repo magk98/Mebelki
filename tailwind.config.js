@@ -239,6 +239,17 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      lato: [
+        "Lato",
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+      ],
       sans: [
         'ui-sans-serif',
         'system-ui',
