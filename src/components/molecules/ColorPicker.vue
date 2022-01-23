@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap justify-center">
     <div v-for="colorName in colorNames" :key="colorName" class="p-2">
-      <a-color-field :colorName="colorName" :active="colorName === selectedColor" @colorChosen="selectedColor = $event" />
+      <a-color-field :colorName="colorName" :active="colorName === selectedColor" @colorChosen="handleColorChosen" />
     </div>
   </div>
 </template>

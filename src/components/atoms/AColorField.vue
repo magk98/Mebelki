@@ -1,5 +1,5 @@
 <template>
-  <div :class="`h-16 w-16 rounded-full flex items-center justify-center transition-all ${wrapperActiveClassName}`">
+  <div :class="`h-16 w-16 rounded-full flex items-center justify-center cursor-pointer transition-all ${wrapperActiveClassName}`">
     <div :class="`rounded-full bg-${colorName}-500 transition-all ${activeClassName}`" @click="$emit('colorChosen', colorName)"/>
   </div>
 </template>
