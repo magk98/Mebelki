@@ -7,7 +7,7 @@
       <product-card name="Krzesło" />
       <product-card name="Sofa" />
       <product-card name="Stół" />
-      <product-card name="Wanna" />
+      <product-card name="Kanapa" />
       <product-card name="Lampa" />
     </div>
   </div>

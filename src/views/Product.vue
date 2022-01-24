@@ -18,7 +18,7 @@
     </div>
     <div class="py-6 flex flex-col items-center space-y-2">
       <fullscreen v-model="fullscreen">
-        <x3d ref="x3d" :class="`border-2 border-solid border-black ${x3dClass}`">
+        <x3d ref="x3d" :class="`border-2 border-solid border-black bg-white ${x3dClass}`">
           <scene>
             <transform DEF="product-preview-transform">
               <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/${name}.x3d`"></Inline>
@@ -86,7 +86,6 @@ export default {
   methods: {
     handleColorChosen(newColor) {
       this.selectedColor = newColor;
-      console.log(this.$refs);
       const models = document.getElementsByTagName('ImageTexture');
       for (let i = 0; i < models.length; i++) {
         if (models[i].id === 'item__texture') {
