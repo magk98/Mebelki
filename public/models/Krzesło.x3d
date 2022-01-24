@@ -25,7 +25,7 @@
 						<Shape>
 							<Appearance>
 							<ImageTexture
-							DEF="MA_Body"
+							DEF="texture"
 							url="textures/gray.JPG">
 							</ImageTexture>
 							</Appearance>
@@ -57,7 +57,7 @@
 						<Shape>
 							<Appearance>
 								<ImageTexture
-                                    DEF="MA_Body"
+                                    DEF="texture"
                                     url="textures/gray.JPG">
                                     </ImageTexture>
 							</Appearance>
@@ -89,7 +89,7 @@
 						<Shape>
 							<Appearance>
 								<ImageTexture
-                                    DEF="MA_Body"
+                                    DEF="ignore"
                                     url="textures/drewno.JPG">
                                     </ImageTexture>
 							</Appearance>
@@ -121,7 +121,7 @@
 						<Shape>
 							<Appearance>
 								<ImageTexture
-                                    DEF="chair_oparcie"
+                                    DEF="texture"
                                     url="textures/gray.JPG">
                                     </ImageTexture>
 							</Appearance>

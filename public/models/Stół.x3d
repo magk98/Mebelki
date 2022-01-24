@@ -21,7 +21,7 @@
 						<Shape>
 							<Appearance>
 							<ImageTexture
-                                DEF="MA_Body"
+                                DEF="ignore"
                                 url="textures/ciemne_drewno.JPG">
                                 </ImageTexture>
 
@@ -54,7 +54,7 @@
 						<Shape>
 							<Appearance>
 								<ImageTexture
-                                    DEF="MA_Body"
+                                    DEF="texture"
                                     url="textures/ciemne_drewno.JPG">
                                     </ImageTexture>
 							</Appearance>

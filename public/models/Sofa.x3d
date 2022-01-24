@@ -20,9 +20,9 @@
 					<Shape>
 						<Appearance>
 						<ImageTexture
-                                                            DEF="MA_Body"
-                                                            url="textures/gray.JPG">
-                                                            </ImageTexture>
+                            DEF="texture"
+                            url="textures/gray.JPG">
+                            </ImageTexture>
 						</Appearance>
 						<IndexedFaceSet solid="false"
 						                creaseAngle="0.5236"

@@ -13,7 +13,7 @@
         <div class="text-3xl font-lato font-light italic">
           123.22 zł
         </div>
-        <color-picker :colorNames="['red', 'blue', 'green', 'gray']" @colorChosen="handleColorChosen" />
+        <color-picker :colorNames="['gray', 'yellow', 'red', 'blue', 'green']" @colorChosen="handleColorChosen" />
       </div>
     </div>
     <div class="py-6 flex flex-col items-center space-y-2">
@@ -75,33 +75,14 @@ export default {
     document.head.appendChild(x3dScript);
   },
   methods: {
-    // changeColor(element, color) {
-    //   // const elementId = element + '__MA_Body'; //dla fotela
-    //   // const elementId = element + '__MA_lambert2'; //dla krzesla
-    //   //
-    //   // document.getElementById(elementId).setAttribute('diffuseColor', color);
-    //   const el = document.getElementById("color");
-    //   el.setAttribute('diffuseColor', color);
-    // },
     handleColorChosen(newColor) {
       this.selectedColor = newColor;
       console.log(this.$refs);
-      const model = document.getElementById('item__MA-Body');
-      model.url = ''
-      this.$refs.color.setAttribute('diffuseColor', this.mapColorNameToRGB(newColor));
-    },
-    mapColorNameToRGB(colorName) {
-      switch (colorName) {
-        case 'red':
-          return '0.3 0 0';
-        case 'green':
-          return '0 0.3 0';
-        case 'blue':
-          return '0 0 0.3';
-        case 'gray':
-          return '0.3 0.3 0.3';
-        default:
-          return '0 0 0';
+      const models = document.getElementsByTagName('ImageTexture');
+      for (let i = 0; i < models.length; i++) {
+        if (models[i].id === 'item__texture') {
+          models[i].setAttribute('url', `../models/textures/${newColor}.JPG`);
+        }
       }
     },
   }
