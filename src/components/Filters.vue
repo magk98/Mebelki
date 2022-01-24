@@ -21,7 +21,7 @@
         vertical: 'slider-vertical w-1.5 h-80',
         textDirectionRtl: 'slider-txt-rtl',
         textDirectionLtr: 'slider-txt-ltr',
-        base: 'mt-10 w-2/3 h-full relative z-1 bg-gray-300 rounded mx-auto',
+        base: 'mt-12 w-2/3 h-full relative z-1 bg-gray-300 rounded mx-auto',
         connects: 'w-full h-full relative overflow-hidden z-0 rounded',
         connect: 'absolute z-1 top-0 right-0 transform-origin-0 transform-style-flat h-full w-full bg-green-500 cursor-pointer tap:duration-300 tap:transition-transform disabled:bg-gray-400 disabled:cursor-not-allowed',
         origin: 'slider-origin absolute z-1 top-0 right-0 transform-origin-0 transform-style-flat h-full w-full h:h-0 v:-top-full txt-rtl-h:left-0 txt-rtl-h:right-auto v:w-0 tap:duration-300 tap:transition-transform',

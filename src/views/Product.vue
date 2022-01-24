@@ -6,14 +6,19 @@
           <img class="object-contain" :src="`/img/chair-${selectedColor}.webp`" />
         </div>
       </div>
-      <div class="bg-gray-200 flex flex-col w-1/2 items-center space-y-4">
-        <a-header>
-          {{ $route.params.name }}
-        </a-header>
-        <div class="text-3xl font-lato font-light italic">
-          123.22 zł
+      <div class="bg-gray-200 flex flex-col w-1/2 items-center space-y-4 rounded-l-3xl justify-around">
+        <div>
+          <a-header>
+            {{ $route.params.name }}
+          </a-header>
+          <div class="text-3xl font-lato font-light italic">
+            123.22 zł
+          </div>
         </div>
         <color-picker :colorNames="['gray', 'yellow', 'red', 'blue', 'green']" @colorChosen="handleColorChosen" />
+        <div>
+          <button class="py-2 px-4 bg-vue-green text-white font-bold text-2xl rounded-lg">Do Koszyka</button>
+        </div>
       </div>
     </div>
     <div class="py-6 flex flex-col items-center space-y-2">
