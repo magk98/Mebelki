@@ -8,7 +8,7 @@
       <product-card name="Sofa" />
       <product-card name="Stół" />
       <product-card name="Kanapa" />
-      <product-card name="Lampa" />
+      <product-card name="Biurko" />
     </div>
   </div>
 </template>
