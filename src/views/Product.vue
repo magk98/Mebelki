@@ -21,41 +21,45 @@
         </div>
       </div>
     </div>
-    <div class="py-6 flex flex-col items-center space-y-2">
-      <fullscreen v-model="fullscreen">
-        <x3d ref="x3d" :class="`border-2 border-solid border-black bg-white ${x3dClass}`">
-          <scene>
-            <transform DEF="product-preview-transform">
-              <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/${name}.x3d`"></Inline>
-            </transform>
-          </scene>
-        </x3d>
-      </fullscreen>
-      <button class="p-2 bg-vue-green text-white font-bold rounded-lg" @click="toggleFullscreen">Fullscreen</button>
-      <a-header>
-        Opis
-      </a-header>
-      <p class="text-justify px-48">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
-        ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
-        bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
-        sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
-        condimentum. Etiam commodo libero et aliquam tempus.
-      </p>
-      <p class="text-justify px-48">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
-        ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
-        bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
-        sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
-        condimentum. Etiam commodo libero et aliquam tempus.
-      </p>
-      <p class="text-justify px-48">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
-        ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
-        bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
-        sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
-        condimentum. Etiam commodo libero et aliquam tempus.
-      </p>
+    <div class="py-6 flex flex-col items-center space-y-8">
+      <div class="space-y-2">
+        <fullscreen v-model="fullscreen">
+          <x3d ref="x3d" :class="`rounded-lg border border-solid border-black bg-white ${x3dClass}`">
+            <scene>
+              <transform DEF="product-preview-transform">
+                <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/${name}.x3d`"></Inline>
+              </transform>
+            </scene>
+          </x3d>
+        </fullscreen>
+        <button class="p-2 bg-vue-green text-white font-bold rounded-lg" @click="toggleFullscreen">Fullscreen</button>
+      </div>
+      <div class="space-y-4">
+        <a-header>
+          Opis
+        </a-header>
+        <p class="text-justify px-48">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
+          ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
+          bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
+          sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
+          condimentum. Etiam commodo libero et aliquam tempus.
+        </p>
+        <p class="text-justify px-48">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
+          ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
+          bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
+          sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
+          condimentum. Etiam commodo libero et aliquam tempus.
+        </p>
+        <p class="text-justify px-48">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
+          ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
+          bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
+          sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
+          condimentum. Etiam commodo libero et aliquam tempus.
+        </p>
+      </div>
     </div>
   </div>
 
