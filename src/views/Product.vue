@@ -17,6 +17,13 @@
       </div>
     </div>
     <div class="py-6 flex flex-col items-center space-y-2">
+      <x3d ref="x3d" class="w-96 h-96 border-2 border-solid border-black">
+        <scene>
+          <transform DEF="product-preview-transform">
+            <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/${name}.x3d`"></Inline>
+          </transform>
+        </scene>
+      </x3d>
       <a-header>
         Opis
       </a-header>
@@ -41,13 +48,6 @@
         sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
         condimentum. Etiam commodo libero et aliquam tempus.
       </p>
-      <x3d ref="x3d" class="w-96 h-96 border-2 border-solid border-black">
-        <scene>
-          <transform DEF="product-preview-transform">
-            <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/Sofa.x3d`"></Inline>
-          </transform>
-        </scene>
-      </x3d>
     </div>
   </div>
 
@@ -66,6 +66,7 @@ export default {
   data() {
     return {
       selectedColor: 'red',
+      name: this.$route.params.name,
     }
   },
   mounted() {
@@ -85,6 +86,8 @@ export default {
     handleColorChosen(newColor) {
       this.selectedColor = newColor;
       console.log(this.$refs);
+      const model = document.getElementById('item__MA-Body');
+      model.url = ''
       this.$refs.color.setAttribute('diffuseColor', this.mapColorNameToRGB(newColor));
     },
     mapColorNameToRGB(colorName) {
@@ -101,11 +104,6 @@ export default {
           return '0 0 0';
       }
     },
-    toggleFullscreen() {
-        const el = this.$refs.x3d;
-        el.style.width = '100%';
-        el.style.height = '100%';
-    }
   }
 }
 </script>
