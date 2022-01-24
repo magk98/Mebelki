@@ -68,6 +68,11 @@ export default {
       selectedColor: 'red',
     }
   },
+  mounted() {
+    const x3dScript = document.createElement('script');
+    x3dScript.setAttribute('src', 'https://www.x3dom.org/download/x3dom.js');
+    document.head.appendChild(x3dScript);
+  },
   methods: {
     // changeColor(element, color) {
     //   // const elementId = element + '__MA_Body'; //dla fotela
