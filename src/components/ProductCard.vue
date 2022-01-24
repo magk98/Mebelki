@@ -1,6 +1,6 @@
 <template>
   <router-link :to="`/product/${name}`">
-    <div class="rounded-lg drop-shadow-md p-4 m-4 bg-gray-100 border transition-all border-solid border-vue-green hover:border-4 flex flex-col items-center">
+    <div class="rounded-lg drop-shadow-md p-4 m-4 shadow-lg border transition-all border-solid hover:shadow-2xl flex flex-col items-center">
       <x3d class="w-72 h-80 border border-solid border-vue-green rounded-xl">
         <scene>
           <NavigationInfo type="NONE"></NavigationInfo>
@@ -13,13 +13,18 @@
           <route fromNode="spin" fromField="value_changed" toNode="product-preview-transform" toField="set_rotation"> </route>
         </scene>
       </x3d>
-      {{ name }}
+      <a-header class="mt-4" :small="true">
+        {{ name }}
+      </a-header>
     </div>
   </router-link>
 </template>
 
 <script>
+import AHeader from './atoms/AHeader.vue'
+
 export default {
+  components: { AHeader },
   name: 'ProductCard',
   props: {
     name: String
