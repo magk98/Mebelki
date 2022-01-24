@@ -17,13 +17,16 @@
       </div>
     </div>
     <div class="py-6 flex flex-col items-center space-y-2">
-      <x3d ref="x3d" class="w-96 h-96 border-2 border-solid border-black">
-        <scene>
-          <transform DEF="product-preview-transform">
-            <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/${name}.x3d`"></Inline>
-          </transform>
-        </scene>
-      </x3d>
+      <fullscreen v-model="fullscreen">
+        <x3d ref="x3d" :class="`border-2 border-solid border-black ${x3dClass}`">
+          <scene>
+            <transform DEF="product-preview-transform">
+              <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/${name}.x3d`"></Inline>
+            </transform>
+          </scene>
+        </x3d>
+      </fullscreen>
+      <button class="p-2 bg-vue-green text-white font-bold rounded-lg" @click="toggleFullscreen">Fullscreen</button>
       <a-header>
         Opis
       </a-header>
@@ -67,12 +70,18 @@ export default {
     return {
       selectedColor: 'red',
       name: this.$route.params.name,
+      fullscreen: false,
     }
   },
   mounted() {
     const x3dScript = document.createElement('script');
     x3dScript.setAttribute('src', 'https://www.x3dom.org/download/x3dom.js');
     document.head.appendChild(x3dScript);
+  },
+  computed: {
+    x3dClass() {
+      return this.fullscreen ? 'h-full w-full' : 'h-96 w-96';
+    }
   },
   methods: {
     // changeColor(element, color) {
@@ -104,6 +113,9 @@ export default {
           return '0 0 0';
       }
     },
+    toggleFullscreen() {
+      this.fullscreen = !this.fullscreen;
+    }
   }
 }
 </script>
