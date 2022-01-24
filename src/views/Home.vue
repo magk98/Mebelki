@@ -1,9 +1,10 @@
 <template>
-  <div class="flex px-4">
-    <div class="w-1/3">
+  <div class="flex">
+    <div class="w-2/6 pt-4">
       <filters />
     </div>
-    <div class="flex flex-wrap items-center justify-center">
+    <div class="w-1/12 bg-gradient-to-r from-white to-gray-100"></div>
+    <div class="flex flex-wrap items-center justify-center bg-gray-100">
       <product-card name="Krzesło" />
       <product-card name="Sofa" />
       <product-card name="Stół" />

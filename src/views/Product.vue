@@ -77,7 +77,7 @@ export default {
   name: 'Product',
   data() {
     return {
-      selectedColor: 'red',
+      selectedColor: 'gray',
       name: this.$route.params.name,
       fullscreen: false,
     }
