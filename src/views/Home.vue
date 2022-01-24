@@ -21,5 +21,10 @@ import Filters from '../components/Filters.vue'
 export default {
   components: { ProductCard, Filters },
   name: 'Home',
+  mounted() {
+    const x3dScript = document.createElement('script');
+    x3dScript.setAttribute('src', 'https://www.x3dom.org/download/x3dom.js');
+    document.head.appendChild(x3dScript);
+  },
 }
 </script>
