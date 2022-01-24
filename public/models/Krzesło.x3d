@@ -24,14 +24,10 @@
 					<Group DEF="group_ME_Mesh">
 						<Shape>
 							<Appearance>
-								<Material DEF="MA_lambert2"
-								          diffuseColor="1.000 1.000 1.000"
-								          specularColor="0.401 0.401 0.401"
-								          emissiveColor="0.000 0.000 0.000"
-								          ambientIntensity="0.000"
-								          shininess="0.500"
-								          transparency="0.0"
-								          />
+							<ImageTexture
+							DEF="MA_Body"
+							url="textures/gray.JPG">
+							</ImageTexture>
 							</Appearance>
 							<IndexedFaceSet solid="false"
 							                creaseAngle="0.5236"
@@ -60,7 +56,10 @@
 					<Group DEF="group_ME_Mesh_001">
 						<Shape>
 							<Appearance>
-								<Material USE="MA_lambert2" />
+								<ImageTexture
+                                    DEF="MA_Body"
+                                    url="textures/gray.JPG">
+                                    </ImageTexture>
 							</Appearance>
 							<IndexedFaceSet solid="false"
 							                creaseAngle="0.5236"
@@ -89,7 +88,10 @@
 					<Group DEF="group_ME_Mesh_002">
 						<Shape>
 							<Appearance>
-								<Material USE="MA_lambert2" />
+								<ImageTexture
+                                    DEF="MA_Body"
+                                    url="textures/drewno.JPG">
+                                    </ImageTexture>
 							</Appearance>
 							<IndexedFaceSet solid="false"
 							                creaseAngle="0.5236"
@@ -118,7 +120,10 @@
 					<Group DEF="group_ME_Mesh_003">
 						<Shape>
 							<Appearance>
-								<Material USE="MA_lambert2" />
+								<ImageTexture
+                                    DEF="chair_oparcie"
+                                    url="textures/gray.JPG">
+                                    </ImageTexture>
 							</Appearance>
 							<IndexedFaceSet solid="false"
 							                creaseAngle="0.5236"

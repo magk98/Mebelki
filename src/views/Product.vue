@@ -25,87 +25,35 @@
         ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
         bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
         sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
-        condimentum. Etiam commodo libero et aliquam tempus. 
+        condimentum. Etiam commodo libero et aliquam tempus.
       </p>
       <p class="text-justify px-48">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
         ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
         bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
         sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
-        condimentum. Etiam commodo libero et aliquam tempus. 
+        condimentum. Etiam commodo libero et aliquam tempus.
       </p>
       <p class="text-justify px-48">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dolor, suscipit ac gravida at, commodo
         ut lectus. Nulla porttitor risus et porttitor tempus. Morbi elementum, arcu vel gravida faucibus, mi diam
         bibendum felis, id viverra tellus tortor eu dui. Integer scelerisque tellus sed ipsum ultricies gravida. Duis
         sagittis feugiat consectetur. Vestibulum eu elit sit amet lorem fermentum commodo. Praesent gravida efficitur
-        condimentum. Etiam commodo libero et aliquam tempus. 
+        condimentum. Etiam commodo libero et aliquam tempus.
       </p>
       <x3d ref="x3d" class="w-96 h-96 border-2 border-solid border-black">
         <scene>
-    <!--      <NavigationInfo id="head" headlight="true" type="EXAMINE"></NavigationInfo>-->
-    <!--      &lt;!&ndash;        <Inline nameSpaceName="fotel" mapDEFToID="true" url="models/fotel_blue.x3d"></Inline>&ndash;&gt;-->
-    <!--      <Inline nameSpaceName="krzeslo" mapDEFToID="true" url="../../public/models/krzeslo.x3d"></Inline>-->
-    <!--      &lt;!&ndash;        <Inline nameSpaceName="Deer" mapDEFToID="true" onclick='redNose();' url="Deer.x3d"></Inline>&ndash;&gt;-->
-          <shape>
-            <appearance>
-                <material ref="color" diffuseColor='0.3 0 0'></material>
-            </appearance>
-            <box></box>
-          </shape>
+          <transform DEF="product-preview-transform">
+            <Inline nameSpaceName="item" mapDEFToID="true" onclick='changeColor();' :url="`../models/Sofa.x3d`"></Inline>
+          </transform>
         </scene>
       </x3d>
     </div>
   </div>
-  <!-- <div class="circle red" @click="changeColor('krzeslo','0.3 0 0')"></div>
-  <div class="circle blue" @click="changeColor('krzeslo','0 0 0.5')"></div>
-  <div class="circle green" @click="changeColor('krzeslo','0 0.6 0')"></div>
-  <div class="circle brown" @click="changeColor('krzeslo','0.3 0.3 0')"></div>
-  <div class="circle black" @click="changeColor('krzeslo','0 0 0')"></div> -->
 
 </template>
 
 <style>
-  /* x3d {
-    border: 2px solid black;
-    background: rgba(255, 255, 255, 1);
-      margin-left: 450px;
-  }
-
-  body {
-    font-size: 110%;
-    font-family: verdana, sans-serif;
-    margin: 3em;
-    color: lightgray;
-  }
-
-  .circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    margin: 8px;
-    display: inline-flex;
-  }
-
-  .red {
-    background-color: #840f0f;
-  }
-
-  .brown {
-    background-color: #5f5818;
-  }
-
-  .black {
-      background-color: black;
-  }
-
-  .blue {
-    background-color: blue;
-  }
-
-  .green {
-    background-color: green;
-  } */
 </style>
 
 <script>
@@ -117,7 +65,7 @@ export default {
   name: 'Product',
   data() {
     return {
-      selectedColor: 'red'
+      selectedColor: 'red',
     }
   },
   methods: {
@@ -131,6 +79,7 @@ export default {
     // },
     handleColorChosen(newColor) {
       this.selectedColor = newColor;
+      console.log(this.$refs);
       this.$refs.color.setAttribute('diffuseColor', this.mapColorNameToRGB(newColor));
     },
     mapColorNameToRGB(colorName) {
@@ -154,5 +103,4 @@ export default {
     }
   }
 }
-
 </script>
